@@ -36,3 +36,14 @@ def fill_grid(grid):
 def print_grid(grid):
     for row in grid:
         print(' '.join(row))
+
+if __name__ == "__main__":
+    grid = generate_empty_grid()
+
+    for word in WORDS:
+        place_word_in_grid(word, grid)
+
+    fill_grid(grid)
+
+    print("Word Search Puzzle:")
+    print_grid(grid)
